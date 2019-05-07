@@ -74,27 +74,25 @@ Excecution path:
  + watercontent.py
    - Reads analog pin for sensor data
    - logMoisture inputs this value and after getting the ntp time is, sets up a json payload and sends it to logger.
- + elasticLog.py - inputs json payload and sends it to elastic endpoint using urequests.
+ + elasticLog.py - inputs json payload and sends it to elastic endpoint using urequests.  
 
-
-
-Measuring the power draw:
- Log interval 10 seconds using sleep
-04.05.19
-19:47 - 0 mAh
-20:09 - 10 mAh
-01:34 - 133 mAh
+Measuring the power draw:  
+ Log interval 10 seconds using sleep  
+04.05.19  
+19:47 - 0 mAh  
+20:09 - 10 mAh  
+01:34 - 133 mAh  
 05.05.19
- - 
-06.05.19
-22:30 - 556mAh
-
- Log interval 30 seconds using deepsleep[3][4]
-22:30 - 0 mAh
-00:01 - 5 mAh
-07:36 - 30 mAh
-16:58 - 65 mAh
-
+ \-   
+06.05.19  
+22:30 - 556mAh  
+   
+ Log interval 30 seconds using deepsleep[3][4]  
+22:30 - 0 mAh   
+00:01 - 5 mAh  
+07:36 - 30 mAh  
+16:58 - 65 mAh  
+ 
 
 TODO:
  - Special characters ÆØÅ seem to not be supported.
@@ -112,10 +110,10 @@ If the code execution takes 100ms right before entering deepsleep there will be 
 	Wemos D1 ESP8266 Pin for deepsleep
 While most documentation says to connect RESET/RST to pin D8 (physical ping 16), this does not apply to this board. Instead us pin D0 (physical pin 4)!
 
-[0] WTF is ESP8266
-[1] Image of the chip
-[2] And image of soil stick
-[3] Deep sleep docs
-[4] Our implementation of deepsleep
-[5] docs
-[4] Our implementation of machine.Timer
+[0] WTF is ESP8266  
+[1] Image of the chip  
+[2] And image of soil stick  
+[3] Deep sleep docs  
+[4] Our implementation of deepsleep  
+[5] docs  
+[4] Our implementation of machine.Timer  
